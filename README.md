@@ -1,2 +1,2 @@
-Build via "cmake . -B build" to automatically download required components.
+Build via "cmake -S . -B build" to automatically download required components.
 
