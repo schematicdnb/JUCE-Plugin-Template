@@ -4,12 +4,12 @@
 #include <juce_dsp/juce_dsp.h>
 
 //==============================================================================
-class AudioProcessor final : public juce::AudioProcessor
+class PluginProcessor final : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    AudioProcessor();
-    ~AudioProcessor() override;
+    PluginProcessor();
+    ~PluginProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -18,7 +18,7 @@ public:
     bool isBusesLayoutSupported (const BusesLayout& layouts) const override;
 
     void processBlock (juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
-    using AudioProcessor::processBlock;
+    using PluginProcessor::processBlock;
 
     //==============================================================================
     juce::AudioProcessorEditor* createEditor() override;
@@ -45,5 +45,5 @@ public:
 
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PluginProcessor)
 };
