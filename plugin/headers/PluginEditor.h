@@ -3,10 +3,10 @@
 #include "PluginProcessor.h"
 
 //==============================================================================
-class PluginEditor final : public juce::AudioProcessorEditor
+class PluginEditor final : public juce::PluginProcessorEditor
 {
 public:
-    explicit PluginEditor (AudioProcessor&);
+    explicit PluginEditor (PluginProcessor&);
     ~PluginEditor() override;
 
     //==============================================================================
@@ -16,7 +16,7 @@ public:
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
-    AudioProcessor& processorRef;
+    PluginProcessor& processorRef;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PluginEditor)
 };
