@@ -1,6 +1,7 @@
 #pragma once
 
 #include "PluginProcessor.h"
+#include <JuceHeader.h>
 
 //==============================================================================
 class PluginEditor final : public juce::PluginProcessorEditor
