@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(<project_name_here> VERSION 0.0.1)
+project(SimpleEQ VERSION 0.0.1)
 
 
 # `juce_add_plugin` adds a static library target with the name passed as the first argument
@@ -21,7 +21,7 @@ juce_add_plugin(${PROJECT_NAME}
     EDITOR_WANTS_KEYBOARD_FOCUS FALSE    # Does the editor need keyboard focus?
     COPY_PLUGIN_AFTER_BUILD TRUE        # Should the plugin be installed to a default location after building?
     PLUGIN_MANUFACTURER_CODE SSND               # A four-character manufacturer id with at least one upper-case character
-    PLUGIN_CODE <plugin_code_here>                            # A unique four-character plugin id with exactly one upper-case character
+    PLUGIN_CODE SPEQ                            # A unique four-character plugin id with exactly one upper-case character
                                                 # GarageBand 10.3 requires the first letter to be upper-case, and the remaining letters to be lower-case
     FORMATS AU VST3                             # The formats to build. Other valid formats are: AAX Unity VST AU AUv3
     PRODUCT_NAME ${PROJECT_NAME}             # The name of the final executable, which can differ from the target name

@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+b52156af89ce29a2b4bcfcc0bab30b26 plugin/SimpleEQ_artefacts/JuceLibraryCode/JuceHeader.h
+e1d82a48757af8b9377a1d5b988de0b7 plugin/SimpleEQ_artefacts/JuceLibraryCode/SimpleEQ_AU/PkgInfo
+976da5e0293ac952e6522f158ae7e5f4 plugin/SimpleEQ_artefacts/JuceLibraryCode/SimpleEQ_VST3/PkgInfo
