@@ -1,2 +1,4 @@
-
-.DS_Store
+/build
+/libs
+**/.DS_Store
+*.filtergraph
