@@ -161,8 +161,8 @@ bool PluginProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* PluginProcessor::createEditor()
 {
-    return new juce::GenericPluginProcessorEditor(*this); // generic placeholder editor
-    // return new PluginProcessorEditor (*this);
+    return new juce::GenericAudioProcessorEditor(*this); // generic placeholder editor
+    // return new PluginEditor(*this);
 }
 
 //==============================================================================

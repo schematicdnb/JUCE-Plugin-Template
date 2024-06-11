@@ -4,7 +4,7 @@
 #include <JuceHeader.h>
 
 //==============================================================================
-class PluginEditor final : public juce::PluginProcessorEditor
+class PluginEditor final : public juce::AudioProcessorEditor
 {
 public:
     explicit PluginEditor (PluginProcessor&);
