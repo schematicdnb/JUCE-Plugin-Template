@@ -89,6 +89,12 @@ void PluginProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
     juce::ignoreUnused(sampleRate, samplesPerBlock);
+
+    // Initialize the DSP module
+    dsp::ProcessSpec spec;
+    spec.sampleRate = sampleRate;
+    spec.maximumBlockSize = samplesPerBlock;
+    spec.numChannels = getTotalNumOutputChannels();
 }
 
 void PluginProcessor::releaseResources()
@@ -149,6 +155,10 @@ void PluginProcessor::processBlock(juce::AudioBuffer<float> &buffer,
         auto *channelData = buffer.getWritePointer(channel);
         juce::ignoreUnused(channelData);
         // ..do something to the data...
+
+        // Process the audio
+        juce::dsp::AudioBlock<float> block(buffer);
+        juce::dsp::ProcessContextReplacing<float> context(block);
     }
 }
 
